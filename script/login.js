@@ -10,12 +10,14 @@ document.getElementById('form-btn').addEventListener('click', () => {
     console.log(pinValue);
 
     // 3. Match both number and pin 
-    if(inputValue == '01234567890' && pinValue == '1234'){
+    if (inputValue == '01234567890' && pinValue == '1234') {
         alert('Successfully loged in')
         window.location.assign('/home.html')
     }
-    else{
+    else {
         alert('Invalid information')
         return;
     }
+    // inputNumber.value = '';
+    pin.value = '';
 })
