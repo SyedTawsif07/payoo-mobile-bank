@@ -25,6 +25,18 @@ document.getElementById('cashout-btn').addEventListener('click', () => {
         // 5-1. true:: show an alert > set the balance
         alert('Cashout Successful');
         setBalance(newBalance);
+
+        // 1.History container ke dhore niye ashbo.
+        const historyContainer = document.getElementById('history');
+        // 2.Ekta new div create korbo.
+        const newDiv = document.createElement('div');
+        // 3.New div a innerHTML add korbo.
+        newDiv.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+        <p>Cashout successful ${cashoutAmount} TAKA to ${cashoutNumber} at ${new Date()}</P>
+        </div>`;
+        // 4.History container a new div append korbo.
+        historyContainer.appendChild(newDiv);
     }
     else {
         // 5-2. true:: show an error alert > return
