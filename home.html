@@ -63,7 +63,7 @@
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
-            <button class="btn flex-col h-full py-5 btn-primary btn-soft">
+            <button onclick="showOnly('transfer')" class="btn flex-col h-full py-5 btn-primary btn-soft">
                 <img src="./assets/opt-3.png" alt="">
                 <p>Transfer Money</p>
             </button>
@@ -202,6 +202,37 @@
         </div>
     </section>
 
+    <section id="transfer" class="w-11/12 space-y-5 mx-auto py-5 hidden">
+        <h2 class="text-2xl font-bold">Transfer Money</h2>
+        <div class="card bg-base-100 w-full shadow rounded-2xl">
+            <div class="card-body">
+                <fieldset class="fieldset">
+
+                    <!-- User acc Number Input -->
+                    <label class="label text-neutral font-bold">User Account Number</label>
+                    <input id="transfer-acc-number" maxlength="11" minlength="11" type="text"
+                        class="input w-full rounded-full bg-base-200 outline-0" placeholder="Enter 11 digit number"
+                        value="01234567890" />
+                    <br>
+
+                    <!-- Amount Input -->
+                    <label class="label text-neutral font-bold">Amount</label>
+                    <input id="transfer-amount" type="number" class="input w-full rounded-full bg-base-200 outline-0"
+                        placeholder="Enter amount to transfer" />
+                    <br>
+
+                    <!-- Pin Number Input -->
+                    <label class="label text-neutral font-bold">Pin Number</label>
+                    <input id="transfer-pin" maxlength="4" minlength="4" type="password"
+                        class="input w-full rounded-full bg-base-200 outline-0" placeholder="Enter 4 digit pin" />
+
+                    <!-- withdraw button -->
+                    <button id="send-money-btn" class="btn btn-primary mt-4 rounded-full border-none">Send Now</button>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
     <section id="history" class="w-11/12 space-y-5 mx-auto py-5 hidden">
         <h2 class="text-2xl font-bold">Transaction History</h2>
         <div class="space-y-5" id="history-container">
@@ -210,6 +241,7 @@
     </section>
 
     <script src="./script/machine.js"></script>
+    <script src="./script/transfer.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/pay-bill.js"></script>
     <script src="./script/cashout.js"></script>

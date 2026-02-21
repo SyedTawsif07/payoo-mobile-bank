@@ -25,11 +25,13 @@ function showOnly(id) {
     const cashout = document.getElementById('cashout');
     const history = document.getElementById('history');
     const payBill = document.getElementById('pay-bill');
+    const transfer = document.getElementById('transfer');
     // shobaike hide koro
     addMoney.classList.add('hidden')
     cashout.classList.add('hidden')
     history.classList.add('hidden')
     payBill.classList.add('hidden')
+    transfer.classList.add('hidden')
 
     // jei id ase shetake show koro
     const selected = document.getElementById(id)
